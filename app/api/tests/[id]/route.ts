@@ -59,7 +59,7 @@ export async function PUT(request: NextRequest, { params }: any) {
 }
 
 // DELETE /api/tests/:id - Delete a test result
-export async function DELETE(request: NextRequest, { params }: { params: { id: string } }) {
+export async function DELETE(request: NextRequest, { params }: any) {
   try {
     // Check if the test exists
     const existingTest = await prisma.diagnosticTest.findUnique({

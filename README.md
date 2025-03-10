@@ -30,6 +30,6 @@ A simple CRUD application for managing diagnostic test results in medical labora
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/medlab-results-keeper.git
-cd medlab-results-keeper
+git clone https://github.com/Downspice/medilabtest.git
+cd medilabtest
 

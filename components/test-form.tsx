@@ -12,7 +12,7 @@ type TestFormProps = {
     testType: string
     result: string
     testDate: string
-    notes?: string
+    notes?: string |null
   }
   onSuccess?: () => void
 }
@@ -66,7 +66,7 @@ export function TestForm({ initialData, onSuccess }: TestFormProps) {
         router.push("/")
         router.refresh()
       }
-    } catch (err) {
+    } catch (err:any) {
       setError(err.message)
     } finally {
       setIsSubmitting(false)

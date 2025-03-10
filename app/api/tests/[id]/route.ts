@@ -22,7 +22,7 @@ export async function GET(request: NextRequest, { params }: any) {
 }
 
 // PUT /api/tests/:id - Update a test result
-export async function PUT(request: NextRequest, { params }: { params: { id: string } }) {
+export async function PUT(request: NextRequest, { params }: any) {
   try {
     const body = await request.json()
 

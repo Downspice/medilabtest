@@ -3,7 +3,7 @@ import { prisma } from "@/lib/prisma"
 import { diagnosticTestSchema } from "@/lib/validations"
 
 // GET /api/tests/:id - Get a specific test result
-export async function GET(request: NextRequest, { params }: { params: { id: string } }) {
+export async function GET(request: NextRequest, { params }: any) {
   try {
     const test = await prisma.diagnosticTest.findUnique({
       where: {
@@ -16,7 +16,7 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
     }
 
     return NextResponse.json(test)
-  } catch (error) {
+  } catch (error:any) {
     return NextResponse.json({ error: "Failed to fetch diagnostic test" }, { status: 500 })
   }
 }

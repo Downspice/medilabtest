@@ -7,7 +7,7 @@ export const dynamic = "force-dynamic"
 export default async function TestPage({ params }: { params: { id: string } }) {
   const test = await prisma.diagnosticTest.findUnique({
     where: {
-      id: params.id,
+      id: params?.id,
     },
   })
 

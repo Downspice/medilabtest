@@ -10,7 +10,7 @@ type DiagnosticTest = {
   testType: string
   result: string
   testDate: string
-  notes?: string
+  notes?: string | null
   createdAt: string
   updatedAt: string
 }

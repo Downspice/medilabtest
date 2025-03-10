@@ -11,7 +11,7 @@ export async function GET() {
       },
     })
     return NextResponse.json(tests)
-  } catch (error) {
+  } catch (error:any) {
     return NextResponse.json({ error: "Failed to fetch diagnostic tests" }, { status: 500 })
   }
 }
@@ -30,7 +30,7 @@ export async function POST(request: NextRequest) {
     })
 
     return NextResponse.json(test, { status: 201 })
-  } catch (error) {
+  } catch (error:any) {
     if (error.name === "ZodError") {
       return NextResponse.json({ error: "Validation failed", details: error.errors }, { status: 400 })
     }

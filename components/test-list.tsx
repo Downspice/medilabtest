@@ -46,7 +46,7 @@ export function TestList({ initialTests }: TestListProps) {
 
       setTests((prevTests) => prevTests.filter((test) => test.id !== id))
       router.refresh()
-    } catch (error) {
+    } catch (error:any) {
       console.error("Error deleting test:", error)
       alert("Failed to delete test")
     } finally {

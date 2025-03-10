@@ -49,7 +49,7 @@ export async function PUT(request: NextRequest, { params }: any) {
     })
 
     return NextResponse.json(updatedTest)
-  } catch (error) {
+  } catch (error:any) {
     if (error.name === "ZodError") {
       return NextResponse.json({ error: "Validation failed", details: error.errors }, { status: 400 })
     }
@@ -80,7 +80,7 @@ export async function DELETE(request: NextRequest, { params }: any) {
     })
 
     return NextResponse.json({ success: true })
-  } catch (error) {
+  } catch (error:any) {
     return NextResponse.json({ error: "Failed to delete diagnostic test" }, { status: 500 })
   }
 }
